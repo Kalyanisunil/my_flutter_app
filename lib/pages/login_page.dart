@@ -90,14 +90,17 @@ class LoginPage extends StatelessWidget {
                     child: ElevatedButton(
                       onPressed: () {
                         Navigator.of(context).pushReplacement(
-                            MaterialPageRoute(builder: (context) {
-                          // push replacement is used so that there is no back navigating to login page
-                          return HomePage();
-                        }));
+                          MaterialPageRoute(
+                            builder: (context) {
+                              // push replacement is used so that there is no back navigating to login page
+                              return HomePage();
+                            },
+                          ),
+                        );
                         Navigator.of(context).pushNamed('/main');
                       },
                       style: ElevatedButton.styleFrom(
-                          primary: AppColors.primary,
+                          backgroundColor: AppColors.primary,
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10))),
                       child: Text(
@@ -120,7 +123,7 @@ class LoginPage extends StatelessWidget {
                       },
                       style: ElevatedButton.styleFrom(
                         padding: EdgeInsets.fromLTRB(45, 10, 45, 10),
-                        primary: Color.fromARGB(255, 238, 238, 238),
+                        backgroundColor: Color.fromARGB(255, 238, 238, 238),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(
                             Radius.circular(15),
@@ -146,7 +149,7 @@ class LoginPage extends StatelessWidget {
                       },
                       style: ElevatedButton.styleFrom(
                           padding: EdgeInsets.fromLTRB(45, 10, 45, 10),
-                          primary: Color.fromARGB(255, 72, 100, 240),
+                          backgroundColor: Color.fromARGB(255, 72, 100, 240),
                           shape: RoundedRectangleBorder(
                               borderRadius:
                                   BorderRadius.all(Radius.circular(15)))),
