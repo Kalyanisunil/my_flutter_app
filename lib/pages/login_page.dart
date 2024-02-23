@@ -12,7 +12,7 @@ class LoginPage extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/image/makeup.jpg'),
+                image: AssetImage('assets/image/loginpage.jpg'),
                 fit: BoxFit.cover)),
         child: SingleChildScrollView(
           child: SizedBox(
@@ -25,9 +25,9 @@ class LoginPage extends StatelessWidget {
                   Text(
                     " Welcome Back!",
                     style: TextStyle(
-                        color: Color.fromARGB(220, 250, 250, 250),
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold,
+                        color: AppColors.black,
+                        fontSize: 30,
+                        fontWeight: FontWeight.w900,
                         fontFamily: ' EBGaramond'),
                   ),
                   SizedBox(
@@ -36,7 +36,7 @@ class LoginPage extends StatelessWidget {
                   Text(
                     " Login to Continue",
                     style: TextStyle(
-                        color: Color.fromARGB(220, 250, 250, 250),
+                        color: AppColors.black,
                         fontSize: 15,
                         fontWeight: FontWeight.bold,
                         fontFamily: ' EBGaramond'),
@@ -48,8 +48,8 @@ class LoginPage extends StatelessWidget {
                   TextField(
                     decoration: InputDecoration(
                       hintText: "Username",
-                      hintStyle: TextStyle(color: AppColors.white),
-                      fillColor: Color.fromARGB(76, 255, 255, 255),
+                      hintStyle: TextStyle(color: AppColors.black),
+                      fillColor: Color.fromARGB(114, 255, 255, 255),
                       filled: true,
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(15),
@@ -62,8 +62,8 @@ class LoginPage extends StatelessWidget {
                   TextField(
                     decoration: InputDecoration(
                       hintText: "Password",
-                      hintStyle: TextStyle(color: AppColors.white),
-                      fillColor: Color.fromARGB(76, 255, 255, 255),
+                      hintStyle: TextStyle(color: AppColors.black),
+                      fillColor: Color.fromARGB(114, 255, 255, 255),
                       filled: true,
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(15),
@@ -79,7 +79,7 @@ class LoginPage extends StatelessWidget {
                       child: Text(
                         "forgot password",
                         style: TextStyle(
-                          color: Color.fromARGB(220, 250, 250, 250),
+                          color: AppColors.black,
                         ),
                       ),
                     ),
@@ -100,7 +100,7 @@ class LoginPage extends StatelessWidget {
                         Navigator.of(context).pushNamed('/main');
                       },
                       style: ElevatedButton.styleFrom(
-                          backgroundColor: AppColors.primary,
+                          backgroundColor: AppColors.button,
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10))),
                       child: Text(
@@ -112,18 +112,19 @@ class LoginPage extends StatelessWidget {
                   Spacer(),
                   Text(
                     " Or sign in with",
-                    style: TextStyle(color: AppColors.white),
+                    style: TextStyle(
+                        color: AppColors.black, fontWeight: FontWeight.w600),
                   ),
                   SizedBox(height: 10),
                   SizedBox(
-                    width: 260,
+                    width: double.infinity,
                     child: ElevatedButton(
                       onPressed: () {
                         print("with google");
                       },
                       style: ElevatedButton.styleFrom(
-                        padding: EdgeInsets.fromLTRB(45, 10, 45, 10),
-                        backgroundColor: Color.fromARGB(255, 238, 238, 238),
+                        padding: EdgeInsets.fromLTRB(80, 10, 80, 10),
+                        backgroundColor: AppColors.white,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(
                             Radius.circular(15),
@@ -140,15 +141,15 @@ class LoginPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  SizedBox(height: 10),
                   SizedBox(
-                    width: 260,
+                    width: double.infinity,
                     child: ElevatedButton(
                       onPressed: () {
                         print("with Facebook");
                       },
                       style: ElevatedButton.styleFrom(
-                          padding: EdgeInsets.fromLTRB(45, 10, 45, 10),
+                          padding: EdgeInsets.fromLTRB(80, 10, 80, 10),
                           backgroundColor: Color.fromARGB(255, 72, 100, 240),
                           shape: RoundedRectangleBorder(
                               borderRadius:
@@ -171,7 +172,8 @@ class LoginPage extends StatelessWidget {
                     children: [
                       Text(
                         "Don't have an account?",
-                        style: TextStyle(color: Colors.white),
+                        style: TextStyle(
+                            color: Colors.black, fontWeight: FontWeight.w500),
                       ),
                       TextButton(
                         onPressed: () {

@@ -1,4 +1,5 @@
 buildscript {
+    ext.kotlin_version = '1.5.31'
     repositories {
         google()
         mavenCentral()
@@ -6,15 +7,8 @@ buildscript {
 
     dependencies {
         classpath 'com.android.tools.build:gradle:7.1.2'
-        classpath 'com.google.gms:google-services:4.3.10' // Add this line for Firebase
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
-}
-
-plugins {
-    id 'com.android.application' // Apply the 'com.android.application' plugin
-    id 'kotlin-android' // Apply the 'kotlin-android' plugin
-    id 'com.google.gms.google-services' // Apply the Google services plugin for Firebase
 }
 
 allprojects {
@@ -24,30 +18,14 @@ allprojects {
     }
 }
 
-android {
-    compileSdkVersion 31
-    buildToolsVersion "31.0.0"
-
-    defaultConfig {
-        applicationId "com.example.my_flutter_app"
-        minSdkVersion 21
-        targetSdkVersion 31
-        versionCode 1
-        versionName "1.0"
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-    }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-    }
+rootProject.buildDir = '../build'
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(':app')
 }
 
-dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.6.10"
-    implementation platform('com.google.firebase:firebase-bom:29.3.0')
-    implementation 'com.google.firebase:firebase-analytics-ktx'
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
 }
-
