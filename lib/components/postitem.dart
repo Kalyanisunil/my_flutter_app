@@ -11,6 +11,9 @@ class PostItem extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 22),
       child: Column(
         children: [
+          SizedBox(
+            height: 10,
+          ),
           Row(
             children: [
               Image.asset('assets/temp/userimg.jpg', width: 50, height: 50),

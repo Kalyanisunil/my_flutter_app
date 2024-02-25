@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:namer_app/config/app_route.dart';
+import 'package:namer_app/config/app_strings.dart';
 import 'package:namer_app/pages/home_page.dart';
 import 'package:namer_app/styles/appcolor.dart';
 
@@ -10,10 +12,10 @@ class LoginPage extends StatelessWidget {
     return Scaffold(
       // resizeToAvoidBottomInset: false,
       body: Container(
-        decoration: BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage('assets/image/loginpage.jpg'),
-                fit: BoxFit.cover)),
+        // decoration: BoxDecoration(
+        //     image: DecorationImage(
+        //         image: AssetImage('assets/image/loginpage.jpg'),
+        //         fit: BoxFit.cover)),
         child: SingleChildScrollView(
           child: SizedBox(
             height: MediaQuery.of(context).size.height,
@@ -23,7 +25,7 @@ class LoginPage extends StatelessWidget {
                 children: [
                   Spacer(),
                   Text(
-                    " Welcome Back!",
+                    AppStrings.Hellowelcome,
                     style: TextStyle(
                         color: AppColors.black,
                         fontSize: 30,
@@ -97,10 +99,10 @@ class LoginPage extends StatelessWidget {
                             },
                           ),
                         );
-                        Navigator.of(context).pushNamed('/main');
+                        Navigator.of(context).pushNamed(AppRoute.main);
                       },
                       style: ElevatedButton.styleFrom(
-                          backgroundColor: AppColors.button,
+                          backgroundColor: Colors.red,
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10))),
                       child: Text(

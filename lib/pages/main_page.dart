@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:namer_app/pages/home_page.dart';
+import 'package:namer_app/pages/profile_page.dart';
 import 'package:namer_app/styles/appcolor.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -24,16 +25,20 @@ class _Main_pageState extends State<Main_page> {
               label: 'home',
             ),
             BottomNavigationBarItem(
-              icon: SvgPicture.asset('assets/svg/user.svg'),
-              label: 'user',
-            ),
-            BottomNavigationBarItem(
               icon: SvgPicture.asset('assets/svg/favorite.svg'),
               label: 'favorite',
             ),
             BottomNavigationBarItem(
+              icon: SvgPicture.asset('assets/svg/add.svg'),
+              label: 'add post',
+            ),
+            BottomNavigationBarItem(
               icon: SvgPicture.asset('assets/svg/messages.svg'),
               label: 'messages',
+            ),
+            BottomNavigationBarItem(
+              icon: SvgPicture.asset('assets/svg/user.svg'),
+              label: 'user',
             ),
           ],
           currentIndex: currentIndex,
@@ -53,16 +58,14 @@ class _Main_pageState extends State<Main_page> {
   final pages = [
     HomePage(),
     Center(
-      child: Text("Favorite"),
+      child: Text("favorites"),
     ),
     Center(
-      child: Text("Add post"),
+      child: Text("add post"),
     ),
     Center(
       child: Text("messages"),
     ),
-    Center(
-      child: Text("user"),
-    ),
+    ProfilePage(),
   ];
 }
