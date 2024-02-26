@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:namer_app/config/app_route.dart';
-import 'package:namer_app/pages/ediit_profile.dart';
-import 'package:namer_app/pages/home_page.dart';
-import 'package:namer_app/pages/login_page.dart';
-import 'package:namer_app/pages/main_page.dart';
 import 'package:namer_app/styles/appcolor.dart';
 
 void main() {

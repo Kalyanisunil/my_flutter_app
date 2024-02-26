@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:namer_app/components/appbar.dart';
+import 'package:namer_app/components/avatar.dart';
 import 'package:namer_app/config/app_route.dart';
 // import 'package:namer_app/pages/login_page.dart';
 import 'package:namer_app/styles/appcolor.dart';
@@ -49,13 +50,8 @@ class ProfilePage extends StatelessWidget {
       ),
       body: Column(
         children: [
-          ClipRRect(
-            borderRadius: BorderRadius.all(Radius.circular(20)),
-            child: Image.asset(
-              'assets/temp/userimg.jpg',
-              width: 90,
-              height: 90,
-            ),
+          avatar(
+            size: 90,
           ),
           SizedBox(
             height: 20,

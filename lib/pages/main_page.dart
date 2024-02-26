@@ -4,13 +4,15 @@ import 'package:namer_app/pages/profile_page.dart';
 import 'package:namer_app/styles/appcolor.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+// ignore: camel_case_types
 class Main_page extends StatefulWidget {
-  const Main_page({Key? key}) : super(key: key);
+  const Main_page({super.key});
 
   @override
   State<Main_page> createState() => _Main_pageState();
 }
 
+// ignore: camel_case_types
 class _Main_pageState extends State<Main_page> {
   int currentIndex = 0;
   @override
