@@ -10,6 +10,7 @@ class AppTextField extends StatelessWidget {
     return TextField(
       decoration: InputDecoration(
         hintText: hint,
+        label: Text(hint),
         hintStyle: TextStyle(color: AppColors.black),
         fillColor: Color.fromARGB(114, 255, 255, 255),
         filled: true,

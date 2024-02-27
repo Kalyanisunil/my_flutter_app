@@ -1,9 +1,11 @@
+// ignore_for_file: sort_child_properties_last
+
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:namer_app/components/appbar.dart';
 import 'package:namer_app/components/avatar.dart';
 import 'package:namer_app/config/app_route.dart';
-// import 'package:namer_app/pages/login_page.dart';
+
 import 'package:namer_app/styles/appcolor.dart';
 
 enum ProfileMenu { edit, logout }

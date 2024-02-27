@@ -3,8 +3,9 @@ import 'package:namer_app/components/appbar.dart';
 import 'package:namer_app/components/postitem.dart';
 // import 'package:namer_app/styles/appcolor.dart';
 
+// ignore: must_be_immutable
 class HomePage extends StatelessWidget {
-  HomePage({Key? key}) : super(key: key);
+  HomePage({super.key});
 
   List<String> users = [];
 

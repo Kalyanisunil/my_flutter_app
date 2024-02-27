@@ -51,7 +51,7 @@ class _Main_pageState extends State<Main_page> {
           },
           showSelectedLabels: false,
           showUnselectedLabels: false,
-          backgroundColor: AppColors.primary,
+          backgroundColor: Colors.amber,
         ),
       ),
     );
