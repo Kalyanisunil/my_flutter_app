@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:namer_app/pages/home_page.dart';
 import 'package:namer_app/pages/profile_page.dart';
-import 'package:namer_app/styles/appcolor.dart';
+
 import 'package:flutter_svg/flutter_svg.dart';
 
 // ignore: camel_case_types
@@ -51,7 +51,8 @@ class _Main_pageState extends State<Main_page> {
           },
           showSelectedLabels: false,
           showUnselectedLabels: false,
-          backgroundColor: Colors.amber,
+          backgroundColor: Colors.deepOrange,
+          fixedColor: Colors.deepOrange,
         ),
       ),
     );

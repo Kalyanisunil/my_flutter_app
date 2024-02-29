@@ -164,7 +164,7 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                 ),
-      
+
                 Row(
                   children: [
                     Text(
@@ -178,7 +178,7 @@ class LoginPage extends StatelessWidget {
                       },
                       child: Text(
                         "Sign up",
-                        style: TextStyle(color: AppColors.primary),
+                        style: TextStyle(color: Colors.deepOrange),
                       ),
                     ),
                   ],

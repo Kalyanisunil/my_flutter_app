@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:namer_app/components/appbar.dart';
 import 'package:namer_app/components/avatar.dart';
 import 'package:namer_app/components/text_field.dart';
+import 'package:namer_app/config/app_route.dart';
+import 'package:namer_app/pages/home_page.dart';
 import 'package:namer_app/styles/appcolor.dart';
 
 enum Gender { none, male, female, other }
@@ -66,15 +68,20 @@ class _EditProfileState extends State<EditProfile> {
                 height: 16,
               ),
               AppTextField(hint: "Location"),
+              SizedBox(height: 16),
               Container(
+                padding: EdgeInsets.only(left: 12, right: 12, top: 6),
                 decoration: BoxDecoration(
-                    color: AppColors.white,
-                    border: Border.all(color: AppColors.black),
+                    color: Color.fromARGB(114, 255, 255, 255),
+                    border: Border.all(color: AppColors.white),
                     borderRadius: BorderRadius.all(Radius.circular(16))),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("Gender"),
+                    Text(
+                      "Gender",
+                      style: TextStyle(fontSize: 17, color: Colors.black),
+                    ),
                     Row(
                       children: [
                         Expanded(
@@ -82,7 +89,10 @@ class _EditProfileState extends State<EditProfile> {
                               visualDensity: VisualDensity(
                                   horizontal: VisualDensity.minimumDensity,
                                   vertical: VisualDensity.minimumDensity),
-                              title: Text("Male"),
+                              title: Text(
+                                "Male",
+                                style: TextStyle(color: Colors.black),
+                              ),
                               contentPadding: EdgeInsets.zero,
                               value: Gender.male,
                               groupValue: gender,
@@ -131,6 +141,30 @@ class _EditProfileState extends State<EditProfile> {
                       ],
                     ),
                   ],
+                ),
+              ),
+              SizedBox(
+                height: 16,
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(
+                      builder: (context) {
+                        // push replacement is used so that there is no back navigating to login page
+                        return HomePage();
+                      },
+                    ),
+                  );
+                  Navigator.of(context).pushNamed(AppRoute.main);
+                },
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.deepOrange,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10))),
+                child: Text(
+                  "Edit",
+                  style: TextStyle(color: AppColors.white),
                 ),
               ),
             ],

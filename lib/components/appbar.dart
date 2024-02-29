@@ -1,7 +1,7 @@
 // ignore_for_file: dead_code
 
 import 'package:flutter/material.dart';
-import 'package:namer_app/styles/appcolor.dart';
+// import 'package:namer_app/styles/appcolor.dart';
 
 class Toolbar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
@@ -11,12 +11,12 @@ class Toolbar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.white,
-      iconTheme: IconThemeData(color: Colors.red),
+      backgroundColor: Colors.deepOrange,
+      iconTheme: IconThemeData(color: Colors.white),
       title: Text(
         title,
         style: TextStyle(
-          color: Colors.black,
+          color: Colors.white,
         ),
       ),
       elevation: 0,

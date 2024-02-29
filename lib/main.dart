@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:namer_app/config/app_route.dart';
-import 'package:namer_app/styles/appcolor.dart';
 
 void main() {
   runApp(MyApp());
