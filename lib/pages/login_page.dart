@@ -22,7 +22,7 @@ class LoginPage extends StatelessWidget {
                 Text(
                   AppStrings.Hellowelcome,
                   style: TextStyle(
-                      color: AppColors.black,
+                      color: AppColors.white,
                       fontSize: 30,
                       fontWeight: FontWeight.w900,
                       fontFamily: ' EBGaramond'),
@@ -33,7 +33,7 @@ class LoginPage extends StatelessWidget {
                 Text(
                   " Login to Continue",
                   style: TextStyle(
-                      color: AppColors.black,
+                      color: AppColors.white,
                       fontSize: 15,
                       fontWeight: FontWeight.bold,
                       fontFamily: ' EBGaramond'),
@@ -45,6 +45,7 @@ class LoginPage extends StatelessWidget {
                 TextField(
                   decoration: InputDecoration(
                     hintText: "Username",
+                    label: Text("Username"),
                     hintStyle: TextStyle(color: AppColors.black),
                     fillColor: Color.fromARGB(114, 255, 255, 255),
                     filled: true,
@@ -59,6 +60,7 @@ class LoginPage extends StatelessWidget {
                 TextField(
                   decoration: InputDecoration(
                     hintText: "Password",
+                    label: Text("Password"),
                     hintStyle: TextStyle(color: AppColors.black),
                     fillColor: Color.fromARGB(114, 255, 255, 255),
                     filled: true,
@@ -76,7 +78,7 @@ class LoginPage extends StatelessWidget {
                     child: Text(
                       "forgot password",
                       style: TextStyle(
-                        color: AppColors.black,
+                        color: AppColors.white,
                       ),
                     ),
                   ),
@@ -97,7 +99,7 @@ class LoginPage extends StatelessWidget {
                       Navigator.of(context).pushNamed(AppRoute.main);
                     },
                     style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.red,
+                        backgroundColor: Colors.orange,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10))),
                     child: Text(
@@ -110,7 +112,7 @@ class LoginPage extends StatelessWidget {
                 Text(
                   " Or sign in with",
                   style: TextStyle(
-                      color: AppColors.black, fontWeight: FontWeight.w600),
+                      color: AppColors.white, fontWeight: FontWeight.w600),
                 ),
                 SizedBox(height: 10),
                 SizedBox(
@@ -170,7 +172,7 @@ class LoginPage extends StatelessWidget {
                     Text(
                       "Don't have an account?",
                       style: TextStyle(
-                          color: Colors.black, fontWeight: FontWeight.w500),
+                          color: Colors.white, fontWeight: FontWeight.w500),
                     ),
                     TextButton(
                       onPressed: () {
@@ -178,7 +180,7 @@ class LoginPage extends StatelessWidget {
                       },
                       child: Text(
                         "Sign up",
-                        style: TextStyle(color: Colors.deepOrange),
+                        style: TextStyle(color: Colors.orange),
                       ),
                     ),
                   ],

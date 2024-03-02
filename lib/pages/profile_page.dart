@@ -52,6 +52,9 @@ class ProfilePage extends StatelessWidget {
       ),
       body: Column(
         children: [
+          SizedBox(
+            height: 24,
+          ),
           avatar(
             size: 90,
           ),
@@ -60,11 +63,11 @@ class ProfilePage extends StatelessWidget {
           ),
           Text(
             'Alexandra Adams',
-            style: TextStyle(color: AppColors.black, fontSize: 20),
+            style: TextStyle(color: AppColors.white, fontSize: 20),
           ),
           Text(
             "New York",
-            style: TextStyle(fontSize: 15),
+            style: TextStyle(fontSize: 15, color: Colors.white),
           ),
           SizedBox(
             height: 20,
@@ -74,20 +77,44 @@ class ProfilePage extends StatelessWidget {
             children: [
               Column(
                 children: [
-                  Text('50k', style: TextStyle(fontSize: 20)),
-                  Text('Followers'),
+                  Text('50k',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: AppColors.white,
+                      )),
+                  Text('Followers',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: AppColors.white,
+                      )),
                 ],
               ),
               Column(
                 children: [
-                  Text('200', style: TextStyle(fontSize: 20)),
-                  Text('posts'),
+                  Text('200',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: AppColors.white,
+                      )),
+                  Text('posts',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: AppColors.white,
+                      )),
                 ],
               ),
               Column(
                 children: [
-                  Text('400', style: TextStyle(fontSize: 20)),
-                  Text('following'),
+                  Text('400',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: AppColors.white,
+                      )),
+                  Text('following',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: AppColors.white,
+                      )),
                 ],
               ),
             ],
