@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:namer_app/components/text_field.dart';
 import 'package:namer_app/config/app_route.dart';
 import 'package:namer_app/config/app_strings.dart';
 import 'package:namer_app/pages/home_page.dart';
@@ -39,36 +40,11 @@ class LoginPage extends StatelessWidget {
                       fontFamily: ' EBGaramond'),
                 ),
                 Spacer(),
-                // SizedBox(
-                //   height: 20,
-                // ),
-                TextField(
-                  decoration: InputDecoration(
-                    hintText: "Username",
-                    label: Text("Username"),
-                    hintStyle: TextStyle(color: AppColors.black),
-                    fillColor: Color.fromARGB(114, 255, 255, 255),
-                    filled: true,
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                  ),
-                ),
+                AppTextField(hint: "Username"),
                 SizedBox(
                   height: 10,
                 ),
-                TextField(
-                  decoration: InputDecoration(
-                    hintText: "Password",
-                    label: Text("Password"),
-                    hintStyle: TextStyle(color: AppColors.black),
-                    fillColor: Color.fromARGB(114, 255, 255, 255),
-                    filled: true,
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                  ),
-                ),
+                AppTextField(hint: "Password"),
                 Align(
                   alignment: Alignment.centerRight,
                   child: TextButton(
@@ -166,7 +142,6 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                 ),
-
                 Row(
                   children: [
                     Text(
