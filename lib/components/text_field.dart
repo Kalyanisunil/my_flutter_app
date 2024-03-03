@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:namer_app/styles/appcolor.dart';
 
 class AppTextField extends StatelessWidget {
   final String hint;

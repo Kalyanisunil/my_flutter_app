@@ -1,5 +1,7 @@
 // import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:namer_app/components/bottomnavbaritems.dart';
+import 'package:namer_app/config/app_icons.dart';
 // import 'package:flutter/widgets.dart';
 import 'package:namer_app/pages/home_page.dart';
 import 'package:namer_app/pages/profile_page.dart';
@@ -23,7 +25,7 @@ class _Main_pageState extends State<Main_page> {
     return Scaffold(
       body: pages[currentIndex.index],
       bottomNavigationBar: MyBottomNavigation(
-        currentIndex: currentIndex.index,
+        currentIndex: currentIndex,
         onTap: (value) {
           setState(() {
             currentIndex = value;
@@ -52,9 +54,13 @@ class _Main_pageState extends State<Main_page> {
 enum menus { home, favorite, add, messages, user }
 
 class MyBottomNavigation extends StatelessWidget {
-  final int currentIndex;
+  final menus currentIndex;
   final ValueChanged<menus> onTap;
-  const MyBottomNavigation({required this.currentIndex, required this.onTap});
+  const MyBottomNavigation({
+    super.key,
+    required this.currentIndex,
+    required this.onTap,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -75,22 +81,41 @@ class MyBottomNavigation extends StatelessWidget {
               child: Row(
                 children: [
                   Expanded(
-                      child: IconButton(
-                          onPressed: () => onTap(menus.home),
-                          icon: SvgPicture.asset("assets/svg/home.svg"))),
+                    child: MyBottomNavigationBarItem(
+                      onPressed: () => onTap(menus.home),
+                      icon: AppIcons.icHome,
+                      current: currentIndex,
+                      name: menus.home,
+                    ),
+                  ),
                   Expanded(
                       child: IconButton(
                           onPressed: () => onTap(menus.favorite),
-                          icon: SvgPicture.asset("assets/svg/favorite.svg"))),
+                          icon: SvgPicture.asset("assets/svg/favorite.svg",
+                              colorFilter: ColorFilter.mode(
+                                  currentIndex == menus.favorite
+                                      ? Colors.black
+                                      : Colors.black.withOpacity(0.5),
+                                  BlendMode.srcIn)))),
                   Spacer(),
                   Expanded(
                       child: IconButton(
                           onPressed: () => onTap(menus.messages),
-                          icon: SvgPicture.asset("assets/svg/messages.svg"))),
+                          icon: SvgPicture.asset("assets/svg/messages.svg",
+                              colorFilter: ColorFilter.mode(
+                                  currentIndex == menus.messages
+                                      ? Colors.black
+                                      : Colors.black.withOpacity(0.5),
+                                  BlendMode.srcIn)))),
                   Expanded(
                       child: IconButton(
                           onPressed: () => onTap(menus.user),
-                          icon: SvgPicture.asset("assets/svg/user.svg"))),
+                          icon: SvgPicture.asset("assets/svg/user.svg",
+                              colorFilter: ColorFilter.mode(
+                                  currentIndex == menus.user
+                                      ? Colors.black
+                                      : Colors.black.withOpacity(0.5),
+                                  BlendMode.srcIn)))),
                 ],
               ),
             ),
