@@ -7,12 +7,13 @@ class MyBottomNavigationBarItem extends StatelessWidget {
   final String icon;
   final menus current;
   final menus name;
-  const MyBottomNavigationBarItem(
-      {super.key,
-      required this.onPressed,
-      required this.icon,
-      required this.current,
-      required this.name});
+  const MyBottomNavigationBarItem({
+    super.key,
+    required this.onPressed,
+    required this.icon,
+    required this.current,
+    required this.name,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +21,7 @@ class MyBottomNavigationBarItem extends StatelessWidget {
         onPressed: onPressed,
         icon: SvgPicture.asset(icon,
             colorFilter: ColorFilter.mode(
-                current == name ? Colors.black : Colors.black.withOpacity(0.5),
+                current == name ? Colors.black : Colors.black.withOpacity(0.1),
                 BlendMode.srcIn)));
   }
 }

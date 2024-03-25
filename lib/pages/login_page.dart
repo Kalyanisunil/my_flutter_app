@@ -72,6 +72,7 @@ class LoginPage extends StatelessWidget {
                           },
                         ),
                       );
+                      // print("Logging");
                       Navigator.of(context).pushNamed(AppRoute.main);
                     },
                     style: ElevatedButton.styleFrom(
